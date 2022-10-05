@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+
+  <div id="logo-div">
+    <img src="../images/logo.svg" alt="Logo Splitter">
+  </div>
+
+  <main>
+    <article id="input-side">
+      <div>
+
+        <label for="bill">Bill</label>
+
+        <input type="number" name="bill" id="bill" placeholder="0" oninput="calculate(bill, tip, numPeople)">
+
+      </div>
+
+      <div>
+
+        <label for="tip">Select Tip %</label>
+
+        <ul>
+          <li>
+            <input type="button" value="5%" name="tip" id="tip5" onclick="tip5();calculate(bill, tip, numPeople)">
+            <label for="tip5"></label>
+          </li>
+          <li>
+            <input  type="button" value="10%" name="tip" id="tip10" onclick="tip10();calculate(bill, tip, numPeople)">
+            <label for="tip10"></label>
+          </li>
+          <li>
+            <input type="button" value="15%" name="tip" id="tip15" onclick="tip15();calculate(bill, tip, numPeople)">
+            <label for="tip15"></label>
+          </li>
+          <li>
+            <input type="button" value="25%" name="tip" id="tip25" onclick="tip25();calculate(bill, tip, numPeople)">
+            <label for="tip25"></label>
+          </li>
+          <li>
+            <input type="button" value="50%" name="tip" id="tip50" onclick="tip50();calculate(bill, tip, numPeople)">
+            <label for="tip50"></label>
+          </li>
+          <input type="number" name="tip" id="tipCustom" placeholder="Custom" oninput="tipCustom();calculate(bill, tip, numPeople)"></input>
+        </ul>
+
+      </div>
+      <div>
+        <div class="people-error">
+          <label for="">Number of People</label>
+          <p id="error">Can't be zero</p>
+        </div>
+        <input type="number" name="numPeople" id="numPeople" class="numPeople" placeholder="0" oninput="calculate(bill, tip, numPeople);validate()">
+
+      </div>
+    </article>
+    <article id="output-side">
+      <div id="outputs">
+        <div class="output-div">
+          <div class="output-label">
+            <p>
+              Tip Amount <br>
+              <span>/ person</span>
+            </p>
+          </div>
+          <div class="output-value">
+            <img src="images/icon-dollar.svg" alt="">
+            <p id="tip-amount">0.00</p>
+          </div>
+        </div>
+        <div class="output-div">
+          <div class="output-label">
+            <p>
+              Total <br>
+              <span>/ person</span>
+            </p>
+          </div>
+          <div class="output-value">
+            <img src="images/icon-dollar.svg" alt="">
+            <p id="total">0.00</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button onclick="reset()">RESET</button>
+      </div>
+    </article>
+  </main>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

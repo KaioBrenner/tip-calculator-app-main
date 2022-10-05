@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(185, 41%, 84%);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+#logo-div {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+#input-side {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#input-side div label {
+    display: block;
+    color: hsl(183, 100%, 15%);
+    font-weight: 600;
+}
+
+#bill {
+    width: 100%;
+    height: 35px;
+    font-size: 1.5em;
+    text-align: right;
+    background-image: url("../images/icon-dollar-bill.svg");
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    background-color: hsla(185, 41%, 84%, 0.277);
+    -ms-progress-appearance: none;
+    font-weight: 900;
+    caret-color: hsl(172, 67%, 45%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="number"]:focus {
+    outline: 1px solid hsl(172, 67%, 45%);
+    border-radius: 5px;
+}
+
+#bill:focus {
+    border: 1px solid hsl(185, 41%, 84%);
+}
+#bill::-webkit-input-placeholder{
+    color: #9EBBBD;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+ul input{
+    width: 150px;
+    height: 43px;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 1.3em;
+    font-weight: 900;
+}
+ul input[type=button]:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+ul input[type=button]:active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+ul input[type=number]{
+    background-color: hsla(185, 41%, 84%, 0.277);
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 4px;
+    cursor: auto;
+    caret-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+ul input::-webkit-input-placeholder{
+    color: hsl(186, 14%, 43%);
+    text-align: center;
+}
+
+
+
+.people-error{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 75, 75);
+}
+.people-error p{
+    display: none;
+}
+#numPeople{
+    width: 100%;
+    background-color: hsla(185, 41%, 84%, 0.277);
+    height: 35px;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 4px;
+    cursor: auto;
+    caret-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-size: 1.3em;
+    font-weight: 900;
+    background-image: url("../images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    border-radius: 5px;
+}
+.numPeople{
+    border: none;
+}
+.input-error{
+    border: 1px solid red;
+}
+#numPeople::-webkit-input-placeholder{
+    color: #9EBBBD;
+}
+
+
+/*Output Section*/
+
+
+#output-side{
+    background-color: hsl(183, 100%, 15%);
+    box-sizing: border-box;
+    padding: 30px 20px 20px 20px;
+    height: 220px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.output-label{
+    font-size: 0.8em;
+    font-weight: 900;
+    color: white;
+}
+.output-label span{
+    color: hsl(184, 31%, 57%);
+}
+#output-side button{
+    width: 100%;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(172, 67%, 45%);
+    font-size: 1.2em;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#output-side button:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+#outputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.output-div{
+    display: flex;
+    justify-content: space-between;
+}
+.output-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+}
+.output-value *{
+    display: inline-block;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+.output-value img{
+    width: 15px;
+}
+
+
+
+@media (min-width: 1440px){
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #logo-div{
+        margin-bottom: 40px;
+    }
+    main{
+        width: 60em;
+        height: 30em;
+        display: flex;
+        top: 10px;
+        gap: 50px;
+        border-radius: 20px;
+    }
+    #input-side{
+        width: 50%;
+        height: 100%;
+    }
+    #output-side{
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 40px;
+    }
+
+    #bill{
+        height: 50px;
+        background-position: 10px;
+        border-radius: 5px;
+    }
+    ul input{
+        width: 130px;
+    }
+    #numPeople{
+        height: 50px;
+        background-position: 10px;
+        border-radius: 5px;
+    }
+}
